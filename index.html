@@ -9,32 +9,49 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
-            color: #333;
+            background-color: #000;
+            color: #f0f0f0;
+            line-height: 1.6;
         }
         header {
             background-image: url('banner-top.png'); /* Replace with your top banner image */
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
         }
         section {
             padding: 20px;
-            margin: 20px;
-            background: white;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            color: #333;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .section-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #007acc;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
             margin-bottom: 10px;
         }
         .button {
             display: inline-block;
-            margin: 5px 10px;
-            padding: 10px 15px;
+            margin: 10px 5px;
+            padding: 12px 20px;
             background-color: #007acc;
             color: white;
             border: none;
@@ -53,10 +70,6 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
         }
         .page-background {
             position: fixed;
@@ -70,13 +83,45 @@
             background-position: center;
             opacity: 0.3;
         }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .button {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="page-background"></div>
 
     <header>
-        <h1>Antonio Sharp</h1>
+        <h1>John Doe</h1>
         <p>Cybersecurity Specialist | 12+ Years of Experience</p>
     </header>
 
@@ -109,14 +154,5 @@
     <footer>
         <p>&copy; 2025 Antonio Sharp. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Add interactivity for future updates
-        document.querySelectorAll('.button').forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Navigating to: ' + button.href);
-            });
-        });
-    </script>
 </body>
 </html>
